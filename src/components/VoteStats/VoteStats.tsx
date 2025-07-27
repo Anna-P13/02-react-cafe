@@ -1,23 +1,20 @@
-// src/components/VoteStats/VoteStats.tsx
-
-import { Votes } from '../../types/votes';
+import css from './VoteStats.module.css';
+import type { Votes } from '../../types/votes';
 
 interface VoteStatsProps {
   votes: Votes;
-  onReset: () => void;
+  totalVotes: number;
+  positiveRate: number;
 }
 
-export default function VoteStats({ votes, onReset }: VoteStatsProps) {
-  const total = votes.good + votes.neutral + votes.bad;
-
+export default function VoteStats({ votes, totalVotes, positiveRate }: VoteStatsProps) {
   return (
-    <div>
-      <h2>Statistics</h2>
-      <p>Good: {votes.good}</p>
-      <p>Neutral: {votes.neutral}</p>
-      <p>Bad: {votes.bad}</p>
-      <p>Total: {total}</p>
-      <button onClick={onReset}>Reset</button>
+    <div className={css.container}>
+      <p className={css.stat}>Good: <strong>{votes.good}</strong></p>
+      <p className={css.stat}>Neutral: <strong>{votes.neutral}</strong></p>
+      <p className={css.stat}>Bad: <strong>{votes.bad}</strong></p>
+      <p className={css.stat}>Total: <strong>{totalVotes}</strong></p>
+      <p className={css.stat}>Positive: <strong>{positiveRate}%</strong></p>
     </div>
   );
 }
