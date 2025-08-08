@@ -1,1 +1,2 @@
 /// <reference types="vite/client" />
+VITE_TMDB_TOKEN = eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NWUzMDE2Njk5MDNmNGIzNjkzNzI0MjBmODg2NzhiNyIsIm5iZiI6MTc1NDQxMDA3Ni42MzkwMDAyLCJzdWIiOiI2ODkyMmM1Y2ZkNzZiMmQzOTliMjNkM2YiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.ahmZgjLdazZTGVzrNCHWXwwMoGdxIcT5gwCWbU0Nayk
